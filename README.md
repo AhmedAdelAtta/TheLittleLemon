@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive restaurant reservation web application developed
+using React as part of the Meta Front-End Developer
+Capstone Project.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+Little Lemon is a Mediterranean restaurant based in Chicago.
+This application allows customers to explore restaurant
+information and reserve a table through an accessible,
+responsive booking interface.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Responsive design for desktop, tablet and mobile devices.
+- Restaurant homepage and navigation.
+- Interactive table reservation form.
+- Date-dependent reservation availability.
+- Prevention of past-date and elapsed-time bookings.
+- Guest selection for groups of 1 to 10 people.
+- Special occasion selection.
+- Customer name and email validation.
+- Accessible form labels and validation messages.
+- Reservation confirmation and form reset.
+- Keyboard navigation and visible focus indicators.
+- Simulated reservation API.
+- Automated unit and integration tests.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- React Hooks
+- Jest
+- React Testing Library
+- Git and GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- npm
+- Git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone or download this repository.
+2. Open the project directory in your terminal.
+3. Install the project dependencies:
 
-### `npm run eject`
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open http://localhost:3000 in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running Tests
 
-## Learn More
+To run all automated tests:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm test -- --watchAll=false
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project includes 19 unit and integration tests covering:
 
-### Code Splitting
+- Initialization of available reservation times.
+- Date-dependent availability.
+- Invalid and past reservation dates.
+- Elapsed reservation times.
+- Booking form validation.
+- Invalid email addresses.
+- Guest number restrictions.
+- Accessible validation messages.
+- Successful reservation submission.
+- Reservation form reset.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Production Build
 
-### Analyzing the Bundle Size
+To create an optimized production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    npm run build
 
-### Making a Progressive Web App
+The production files will be generated in the build directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+    little-lemon/
+    ├── public/
+    │   └── index.html
+    ├── src/
+    │   ├── App.js
+    │   ├── App.css
+    │   ├── App.test.js
+    │   ├── Header.js
+    │   ├── BookingForm.js
+    │   ├── ConfirmedBooking.js
+    │   └── index.js
+    ├── .gitignore
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Component Architecture
 
-### Deployment
+### App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Manages application state, reservation availability,
+booking validation and submission.
 
-### `npm run build` fails to minify
+### Header
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Provides restaurant branding, navigation and an accessible
+skip-navigation link.
+
+### BookingForm
+
+Displays reservation fields, available times and accessible
+validation messages.
+
+### ConfirmedBooking
+
+Displays successful reservation details and allows customers
+to make another reservation.
+
+## Accessibility
+
+The application incorporates accessibility practices including:
+
+- Semantic HTML elements.
+- Associated form labels.
+- Alternative text for images.
+- ARIA attributes for validation messages.
+- Keyboard-accessible controls.
+- Visible focus indicators.
+- Skip-navigation functionality.
+- Screen reader announcements.
+- Focus management after successful submission.
+- Reduced-motion support.
+
+## API Simulation
+
+The application uses local simulated API functions:
+
+- fetchAPI: Returns available reservation times for a date.
+- submitAPI: Validates and simulates reservation submission.
+
+No backend server or database is required.
+Reservations are not transmitted to a real restaurant
+or permanently stored.
+
+## Author
+
+Ahmed Adel Youssef
+
+Developed as part of the Meta Front-End Developer
+Professional Certificate.
